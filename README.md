@@ -1,8 +1,8 @@
 
 # installation
 ## front
-'''bash
+```bash
 npm install --save-dev @babel/core
-'''
+```
 ## backend
 
