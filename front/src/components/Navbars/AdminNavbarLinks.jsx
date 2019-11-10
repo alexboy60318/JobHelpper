@@ -17,9 +17,14 @@
 */
 import React, { Component } from "react";
 import { NavItem, Nav, NavDropdown, MenuItem } from "react-bootstrap";
-import ReactSearchBox from 'react-search-box';
+// import ReactSearchBox from 'react-search-box';
 
 class AdminNavbarLinks extends Component {
+  constructor(props){
+    super(props);
+    console.log(props)
+    
+  }
   render() {
     const notification = (
       <div>
@@ -29,30 +34,35 @@ class AdminNavbarLinks extends Component {
         <p className="hidden-lg hidden-md">Notification</p>
       </div>
     );
+    const logged_out_nav = (
+      <div>
+        <ur>
+        <NavItem onClick={()=>this.props.display_form('login')}>login</NavItem>
+        <NavItem onClick={()=>this.props.display_form('signup')}>signup</NavItem>
+        </ur>
+      </div>
+    );
+    const logged_in_nav = (
+      <div>
+        <NavItem onClick={this.props.handle_logout}>logout</NavItem>
+      </div>
+    );
+    
+  
     return (
       <div>
         <Nav>
           <NavItem>
-          <ReactSearchBox
-        placeholder=""
-        value="Doe"
-        data={this.data}
-        callback={record => console.log(record)}
-      />
+        
 
           </NavItem>
           
           <NavItem eventKey={3} href="#">
-            <i className="fa fa-search" />
-            <p className="hidden-lg hidden-md">Search</p>
+            
           </NavItem>
         </Nav>
         <Nav pullRight>
-
-          
-          <NavItem eventKey={3} href="#">
-            Log out
-          </NavItem>
+        <div>{this.props.logged_in ? logged_in_nav : logged_out_nav}</div>
         </Nav>
       </div>
     );

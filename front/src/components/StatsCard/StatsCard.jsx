@@ -33,6 +33,7 @@ export class StatsCard extends Component {
               <div className="numbers">
                 <p>{this.props.statsText}</p>
                 {this.props.statsValue}
+                <p>{this.props.statsValue2}</p>
               </div>
             </Col>
           </Row>

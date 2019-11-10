@@ -21,11 +21,11 @@ import { Grid, Row, Col } from "react-bootstrap";
 
 import { Card } from "components/Card/Card.jsx";
 import { StatsCard } from "components/StatsCard/StatsCard.jsx";
-import { Tasks } from "components/Tasks/Tasks.jsx";
-import { cloneWithoutLoc } from "@babel/types";
-import { exists } from "fs";
 
+import TodoApp from "components/Todoapp/Todoapp.jsx";
+import Todofinal from "components/Todoapp/Todofinal";
 
+var todoItems=[];
 class Dashboard extends Component {
   constructor(props){
     super(props);
@@ -86,7 +86,6 @@ class Dashboard extends Component {
     let weatherfeel =this.state.weatherfeel;
     let locations = this.state.locationName;
     
-    console.log(items)
     for(var key1 in items.records){
       //records
       if(key1 ==="location"){
@@ -94,6 +93,7 @@ class Dashboard extends Component {
         
         for(var key2 in datapr1){
           //location array
+            if(key2 == 5){
             var datapr2 = datapr1[key2]
             for(var key3 in datapr2){
               if(key3 ==="locationName"){
@@ -115,7 +115,7 @@ class Dashboard extends Component {
                           if(key6 == 2){
                             var datapr6 = datapr5[key6]
                             for(var key7 in datapr6){
-                              if(key7 ==="endTime"){
+                              if(key7 ==="startTime"){
                                 renewtime = datapr6[key7]
                               }else if(key7 ==="parameter"){
                                 var datapr7 = datapr6[key7]
@@ -170,7 +170,7 @@ class Dashboard extends Component {
                           if(key6 == 2){
                             var datapr6 = datapr5[key6]
                             for(var key7 in datapr6){
-                              if(key7 ==="endTime"){
+                              if(key7 ==="startTime"){
                                 renewtime = datapr6[key7]
                               }else if(key7 ==="parameter"){
                                 var datapr7 = datapr6[key7]
@@ -226,7 +226,9 @@ class Dashboard extends Component {
               }
             }
         }
-      }
+
+        }
+    }
       
       // in records
       // for(var key in datapr1){
@@ -239,8 +241,8 @@ class Dashboard extends Component {
       //   }
       // }
     }
-    console.log(weather_degree)
-    console.log(weather_text)
+   console.log(items)
+   console.log(humidity)
     return (
       <div className="content">
         <Grid fluid>
@@ -269,7 +271,7 @@ class Dashboard extends Component {
                 //key = //{item.records.loaction[0].weatherElement[4]}
                 bigIcon={<i className="pe-7s-umbrella text-success" />}
                 place={locations}
-                statsText="humidity"
+                statsText="precipitation"
                 statsValue={humidity+"%"}
                 statsValue2 ={weatherfeel}
                 statsIcon={<i className="fa fa-refresh" />}
@@ -280,36 +282,38 @@ class Dashboard extends Component {
             
           </Row>
           <Row>
-            <Col md={4}>
+            <Col md={6}>
               <Card
-                statsIcon="fa fa-history"
+                
                 id="chartHours"
                 title="BackGround Music"
-                category="24 Hours performance"
-                stats="Updated 3 minutes ago"
+                
+                
                 content={
                   
                   <div>
-<iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1Epr7cEck9eESt/" width="320" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"  ></iframe>
+<iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1Epr7cEck9eESt/" width="500" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"  ></iframe>
                   </div>
                 }
 
               />
             </Col>
-            <Col md={8}>
+            <Col md={6}>
               <Card
                 title="Todo List"
-                category="Job Schedulaing"
-                stats="Updated 3 minutes ago"
-                statsIcon="fa fa-history"
+                
+                
+                
                 content={
-                  <div className="table-full-width">
-                    <table className="table">
-                      <Tasks />
-                    </table>
+                  
+                  <div  >
+                    
+                      <Todofinal />
+                   
                   </div>
                 }
               />
+              
             </Col>
           </Row>
 

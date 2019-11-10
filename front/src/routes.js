@@ -16,6 +16,7 @@
 
 */
 import Dashboard from "views/Dashboard.jsx";
+import Jobreport from "views/Jobreport.jsx"
 import UserProfile from "views/UserProfile.jsx";
 import TableList from "views/TableList.jsx";
 import Typography from "views/Typography.jsx";
@@ -25,13 +26,13 @@ import Notifications from "views/Notifications.jsx";
 import Upgrade from "views/Upgrade.jsx";
 
 const dashboardRoutes = [
-  {
-    path: "/user",
-    name: "User Profile",
-    icon: "pe-7s-user",
-    component: UserProfile,
-    layout: "/admin"
-  },
+  // {
+  //   path: "/user",
+  //   name: "User Profile",
+  //   icon: "pe-7s-user",
+  //   component: UserProfile,
+  //   layout: "/admin"
+  // },
   {
     path: "/dashboard",
     name: "Dashboard",
@@ -39,14 +40,20 @@ const dashboardRoutes = [
     component: Dashboard,
     layout: "/admin"
   },
-
   {
-    path: "/table",
-    name: "Learning History",
-    icon: "pe-7s-note2",
-    component: TableList,
+    path: "/jobreport",
+    name: "Jobreport",
+    icon: "pe-7s-graph",
+    component: Jobreport,
     layout: "/admin"
   },
+  // {
+  //   path: "/table",
+  //   name: "Learning History",
+  //   icon: "pe-7s-note2",
+  //   component: TableList,
+  //   layout: "/admin"
+  // },
 
 
 

@@ -11,6 +11,10 @@ django = "*"
 djangorestframework = "==3.10.3"
 django-rest-knox = "*"
 restdjangoframework = "*"
+djangorestframework-jw = "*"
+django-cors-headers = "*"
+rest-framework = "*"
+djangorestframework-jwt = "*"
 
 [requires]
 python_version = "3.7"
