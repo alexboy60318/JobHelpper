@@ -31,14 +31,17 @@ function TodoForm({ addTodo }) {
     <form onSubmit={handleSubmit}>
       
       <input
-        size="54"
+        size="53"
         
         type="text"
         className="input"
         value={value}
         onChange={e => setValue(e.target.value)}
       />
-               press Enter to upload
+      <p>
+        Press Enter to upload
+      </p>
+        
     </form>
   );
 }

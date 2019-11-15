@@ -1,14 +1,16 @@
 {
-  "name": "light-bootstrap-dashboard-react",
+  "name": "jobhelper",
   "version": "1.3.0",
   "private": true,
   "dependencies": {
     "bootstrap": "3.3.7",
     "chartist": "0.10.1",
+    "install": "^0.13.0",
     "node-sass": "4.12.0",
     "react": "16.8.6",
     "react-bootstrap": "0.32.4",
     "react-chartist": "0.13.3",
+    "react-crud-admin": "^1.0.48",
     "react-dom": "16.8.6",
     "react-google-maps": "9.4.5",
     "react-notification-system": "0.2.17",
@@ -23,6 +25,12 @@
     "@types/googlemaps": "3.30.19",
     "@types/markerclustererplus": "2.1.33",
     "@types/react": "16.8.13",
+    "babel-core": "^6.26.3",
+    "babel-loader": "8.0.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
     "typescript": "3.4.3"
   },
   "scripts": {

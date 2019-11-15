@@ -17,13 +17,6 @@
 */
 import Dashboard from "views/Dashboard.jsx";
 import Jobreport from "views/Jobreport.jsx"
-import UserProfile from "views/UserProfile.jsx";
-import TableList from "views/TableList.jsx";
-import Typography from "views/Typography.jsx";
-import Icons from "views/Icons.jsx";
-import Maps from "views/Maps.jsx";
-import Notifications from "views/Notifications.jsx";
-import Upgrade from "views/Upgrade.jsx";
 
 const dashboardRoutes = [
   // {

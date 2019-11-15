@@ -292,7 +292,7 @@ class Dashboard extends Component {
                 content={
                   
                   <div>
-<iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1Epr7cEck9eESt/" width="500" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"  ></iframe>
+<iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1Epr7cEck9eESt/" width="auto" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"  ></iframe>
                   </div>
                 }
 
