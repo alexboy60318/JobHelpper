@@ -17,7 +17,7 @@
 */
 import Dashboard from "views/Dashboard.jsx";
 import Jobreport from "views/Jobreport.jsx"
-
+import FileUpload from "components/blob/FileUpload"
 const dashboardRoutes = [
   // {
   //   path: "/user",
@@ -40,13 +40,13 @@ const dashboardRoutes = [
     component: Jobreport,
     layout: "/admin"
   },
-  // {
-  //   path: "/table",
-  //   name: "Learning History",
-  //   icon: "pe-7s-note2",
-  //   component: TableList,
-  //   layout: "/admin"
-  // },
+  {
+    path: "/FileUpload",
+    name: "Fileupload",
+    icon: "pe-7s-note2",
+    component: FileUpload,
+    layout: "/admin"
+  },
 
 
 
